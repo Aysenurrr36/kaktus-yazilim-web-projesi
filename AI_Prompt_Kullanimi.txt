@@ -1,0 +1,33 @@
+KAKTÜS YAZILIM - STAJ PROJESİ
+YAPAY ZEKA (AI) KULLANIM RAPORU VE İZLENEN YAKLAŞIM
+
+Bu proje geliştirilirken yapay zeka (AI) destekli kodlama ve tasarım süreçlerinden aktif olarak yararlanılmıştır. AI, süreci hızlandırmak, kod kalitesini artırmak ve modern UI/UX standartlarını (Glassmorphism, CSS Grid/Flexbox, Animasyonlar) uygulamak için kullanılmıştır.
+
+İzlenen Yaklaşım:
+1. Öncelikli Tasarım Kararları: Projenin modern ve "SaaS" (Hizmet olarak yazılım) standartlarına uygun olması için koyu/açık mod destekli, temiz bir mimari planlanmıştır. "Glassmorphism" ve canlı vurgu renkleri (accent colors) belirlenmiştir.
+2. AI ile Etkileşimli Kodlama (Pair Programming): Statik şablon kullanmak yerine, tüm HTML/CSS ve JS yapıları sıfırdan, adım adım AI komutlarıyla (prompt) inşa edilmiştir.
+3. Problem Çözme: Kaktiva asistanının click-outside kapanma sorunu, mobil uyumluluk (responsive) grid problemleri ve performans (loading ekranı) konularında AI'dan algoritmik çözümler istenmiştir.
+
+Örnek Promptlar (Süreç boyunca kullanılan bazı komutlar):
+
+- Prompt 1 (Temel Mimari):
+"Kaktüs yazılım adında kurumsal bir web sitesi tasarla modern olsun. Css framework kullanma. Tek bir style.css ve script.js dosyası oluştur. Glassmorphism gibi modern teknikler kullan."
+
+- Prompt 2 (Kaktiva Asistan Geliştirmesi):
+"intro sayfasında ki kaktüs asistanı kaldır ve index.html sayfasında ki asistanı daha geliştir. Daha büyük bir pencere olsun, sohbet temizleme butonu, tarih-saat gösterimi ekle. 'Merhaba, Hizmetler, Fiyat' gibi hızlı sorular eklensin."
+
+- Prompt 3 (Hata Çözümü):
+"kaktiva asistanı hemen kapamasın örn: süreç baştım ilk başta hemen kapandı o sorunu çöz istenen şekilde çalışsın bide kaktiva asistana hızlı iletişim için whatsapa yönlendirme ve hemen arayın şeklinde kısımlar eklyelim"
+
+- Prompt 4 (Tasarım Revizesi - Case Study):
+"index.html sayfasında Projelerimiz kısmının altına başarı hikayelerimiz memnuniyet gibi vs. bir şeyler ekle sana bıraktım. Başarı hikayesi (case study) büyük kart önce problem → çözüm → sonuç. Müşteri memnuniyeti küçük kartlar foto / logo kısa yorum."
+
+- Prompt 5 (Veri Odaklı UI):
+"Sağ kartı biraz daha büyüt en ve boy olarak ve içine para değil de %+245 büyüme ve 12.4 m aktif kullanıcı gibi şeyler ekle. Referanslar kısmını biraz daha vurgulu ve canlı yap markaları kutu kutu şeklinde yap."
+
+Teknoloji Yığını:
+- HTML5 (Semantik)
+- CSS3 (Vanilla, CSS Variables, Flexbox, Grid, Custom Keyframe Animations)
+- Vanilla JavaScript (Event listeners, sessionStorage yönetimi, DOM manipulation)
+
+Not: Bu projede hazır bir CSS framework (Bootstrap, Tailwind vb.) kullanılmamış, tamamen projeye özel bir tasarım sistemi oluşturulmuştur.

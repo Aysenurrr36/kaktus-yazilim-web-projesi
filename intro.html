@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaktüs Yazılım | Özet</title>
+    <link rel="stylesheet" href="intro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        // Siteye ilk kez girildiğini işaretle (intro görüldü sayılır)
+        sessionStorage.setItem('introViewed', '1');
+    </script>
+    
+    <main class="intro-page">
+        <section class="intro-hero">
+            <div class="intro-overlay-lines" aria-hidden="true"></div>
+
+            <div class="intro-header">
+                
+
+                <div class="intro-menu-wrap">
+                    <button id="introMenuToggle" class="intro-menu" aria-label="Menü">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div id="introDropdownMenu" class="intro-dropdown hidden">
+                        <a class="intro-dropdown-item" href="#">Hakkımızda</a>
+                        <a class="intro-dropdown-item" href="#">Kariyer</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-body">
+                <div class="intro-copy">
+                    <h1>
+                        Dijital Dünyada İz Bırakın
+                        <span>YAZILIM &amp; DİJİTAL BÜYÜME</span>
+                    </h1>
+                    <p class="intro-text">
+                        Web tasarım, yapay zeka ve dijital pazarlamada 360° çözüm ortağınız.
+                    </p>
+
+                    <div class="guide-row">
+                        <a class="enter-btn" href="index.html?fromIntro=1">Daha Fazlası <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="intro-stats">
+                        <div class="stat-item"><strong>6+</strong> Yıl</div>
+                        <div class="stat-item"><strong>100+</strong> Proje</div>
+                        <div class="stat-item"><strong>13+</strong> Uzman</div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+    </main>
+
+    <script>
+        (function() {
+            const introMenuToggle = document.getElementById('introMenuToggle');
+            const introDropdownMenu = document.getElementById('introDropdownMenu');
+
+            if (introMenuToggle && introDropdownMenu) {
+                introMenuToggle.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    introDropdownMenu.classList.toggle('hidden');
+                });
+
+                introDropdownMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        introDropdownMenu.classList.add('hidden');
+                    });
+                });
+
+                document.addEventListener('click', function(event) {
+                    if (!introDropdownMenu.contains(event.target) && !introMenuToggle.contains(event.target)) {
+                        introDropdownMenu.classList.add('hidden');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
